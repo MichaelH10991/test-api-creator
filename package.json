@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@iobxt/api-creator": "1.1.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.3"
+  },
+  "name": "test-api-creator",
+  "version": "1.0.0",
+  "main": "foo.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "create": "./test-scripts/create.sh",
+    "read": "./test-scripts/read-all.sh",
+    "read:one": "./test-scripts/read-one.sh",
+    "delete": "./test-scripts/delete-all.sh",
+    "delete:one": "./test-scripts/delete-one.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
