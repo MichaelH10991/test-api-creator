@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@iobxt/api-creator": "1.1.0",
+    "@iobxt/api-creator": "file:../api-creator",
+    "@iobxt/db-resource": "^1.0.0",
     "express": "^4.18.2",
     "mongoose": "^7.4.3"
   },
@@ -14,6 +15,7 @@
     "read:one": "./test-scripts/read-one.sh",
     "delete": "./test-scripts/delete-all.sh",
     "delete:one": "./test-scripts/delete-one.sh",
+    "zip": "./test-scripts/zip.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

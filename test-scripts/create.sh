@@ -1,9 +1,40 @@
 #!/bin/bash
 
-curl -X POST http://`hostname`:8080/create \
+# url="http`hostname`:8080"
+url="https://ck2hqui3j6.execute-api.eu-west-1.amazonaws.com/foo"
+
+curl -X POST ${url}/create \
   -H "Content-Type: application/json" \
-  -d '{ 
-    "title": "a title",
-    "body": "some body",
-    "date": "2023-08-22T20:59:20.559Z"
+  -d '{
+    "language": "Croatian",
+    "group": "greetings",
+    "local": "Hello",
+    "foreign": "Zdravo"
+  }'
+
+curl -X POST ${url}/create \
+  -H "Content-Type: application/json" \
+  -d '{
+    "language": "Croatian",
+    "group": "greetings",
+    "local": "Hi",
+    "foreign": "Bok"
+  }'
+
+curl -X POST ${url}/create \
+  -H "Content-Type: application/json" \
+  -d '{
+    "language": "Croatian",
+    "group": "resturant",
+    "local": "Table",
+    "foreign": "Stol"
+  }'
+
+curl -X POST ${url}/create \
+  -H "Content-Type: application/json" \
+  -d '{
+    "language": "Spanish",
+    "group": "resturant",
+    "local": "Table",
+    "foreign": "Stol"
   }'

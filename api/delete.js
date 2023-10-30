@@ -3,7 +3,7 @@ const init = (router, config, resources) => {
   router.delete("/delete/:id", async (req, res) => {
     const id = req.params.id;
     try {
-      const deleteResponse = await db.BlogPost.deleteOne({ _id: id });
+      const deleteResponse = await db.Question.deleteOne({ id: id });
       res.status(200).json(deleteResponse);
     } catch (error) {
       res
@@ -14,7 +14,7 @@ const init = (router, config, resources) => {
 
   router.delete("/delete", async (req, res) => {
     try {
-      const deleteResponse = await db.BlogPost.deleteMany();
+      const deleteResponse = await db.Question.deleteMany();
       res.status(200).json(deleteResponse);
     } catch (error) {
       res
